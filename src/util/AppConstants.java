@@ -14,6 +14,9 @@ public final class AppConstants {
     public static final String DEVICE_ADDED = "DEVICE_ADDED";
     public static final String DEVICE_STATUS_CHANGED = "DEVICE_STATUS_CHANGED";
     public static final String TEMP_CHANGED = "TEMP_CHANGED";
+    public static final String AC_POWER_CHANGED = "AC_POWER_CHANGED";
+    public static final String AC_MODE_CHANGED = "AC_MODE_CHANGED";
+    public static final String AC_FAN_CHANGED = "AC_FAN_CHANGED";
 
     private AppConstants() {
     }
