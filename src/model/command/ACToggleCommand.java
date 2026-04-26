@@ -17,6 +17,9 @@ public final class ACToggleCommand implements Command {
         ac.applyPowerState(nextState);
     }
 
+
+    ///
+    ///
     @Override
     public void undo() {
         ac.applyPowerState(prevState);

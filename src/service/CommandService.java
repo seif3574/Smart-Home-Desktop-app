@@ -5,7 +5,7 @@ import model.command.CommandHistory;
 
 
 public final class CommandService {
-
+    //singleton
     private static volatile CommandService instance;
     private final CommandHistory history;
 
@@ -23,6 +23,10 @@ public final class CommandService {
         }
         return instance;
     }
+    /////////////////////////////////////////////////////////
+
+    //command
+    // invoker : command service
 
     public void execute(Command command) {
         if (command == null) return;
