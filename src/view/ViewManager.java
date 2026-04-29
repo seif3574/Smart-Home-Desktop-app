@@ -1,8 +1,14 @@
 package view;
 
+
 import controller.ACController;
 import controller.DashboardController;
 import javafx.scene.Scene;
+
+import controller.DashboardController;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+
 import javafx.stage.Stage;
 import model.device.SmartAC;
 import util.AppConstants;
@@ -40,12 +46,19 @@ public final class ViewManager {
     }
 
     public void showACControl(SmartAC ac) {
+
         ACControlView acControlView = new ACControlView();
         ACController acController = new ACController(ac, acControlView);
         acController.init();
 
         primaryStage.setScene(new Scene(acControlView.build(), 980, 640));
         primaryStage.show();
+
+        Alert alert = new Alert(Alert.AlertType.INFORMATION,
+                "AC Control (Member 4 scope) is not implemented in Member 3 tasks.\nSelected: " + ac.getName());
+        alert.setHeaderText("Navigation ready");
+        alert.showAndWait();
+
     }
 
     public void showAddDevice() {
